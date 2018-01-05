@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import './App.css'
+import Comment from './Comment.js';
 
 // define our Hello component
 class Post extends Component {
@@ -13,8 +14,7 @@ class Post extends Component {
       <h1>{this.props.title}</h1>
       <h3>by {this.props.author}</h3>
       <p>{this.props.body}</p>
-      <p>comments: </p>
-      <p>{this.props.comments[0]}</p>
+      <Comment body={this.props.comments[0]} />
       </div>
     )
   }
