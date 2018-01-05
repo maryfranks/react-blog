@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import './Post.css'
 import Comment from './Comment.js';
+import Author from './Author.js'
 
 // define our Hello component
 class Post extends Component {
@@ -13,11 +14,16 @@ class Post extends Component {
       <Comment body={this.props.comments[1]} />,
       <Comment body={this.props.comments[2]} />
     ]
+    let allAuthors = [
+      <Author author={this.props.authors[0]}/>,
+      <Author author={this.props.authors[1]}/>,
+      <Author author={this.props.authors[2]}/>
+    ]
     // make sure to return some UI
     return (
       <div>
         <h1>{this.props.title}</h1>
-        <h2>by {this.props.author}</h2>
+        <h2>by {allAuthors}</h2>
         <div>
           <p>{this.props.body}</p>
         </div>

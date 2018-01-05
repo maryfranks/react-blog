@@ -5,7 +5,11 @@ import './index.css'
 
 var post = {
   title: "Dinosaurs are awesome",
-  author: "Stealthy Stegoasaurus",
+  authors: [
+    "Stealthy Stegoasaurus",
+    "Tiny T-Rex",
+    "Ivory Iguanodon"
+  ],
   body: "Check out this body property!",
   comments: [
     "First!",
@@ -17,7 +21,7 @@ var post = {
 ReactDOM.render(
   <Post
   title={post.title}
-  author={post.author}
+  authors={post.authors}
   body={post.body}
   comments={post.comments}/>,
   document.getElementById('root')
