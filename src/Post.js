@@ -1,7 +1,7 @@
 // bring in React and Component from React
 
 import React, {Component} from 'react';
-import './App.css'
+import './Post.css'
 import Comment from './Comment.js';
 
 // define our Hello component
