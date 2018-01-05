@@ -1,6 +1,7 @@
 // bring in React and Component from React
 
 import React, {Component} from 'react';
+import './App.css'
 
 // define our Hello component
 class Post extends Component {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Post from './App';
+import './index.css'
 
 var post = {
   title: "Dinosaurs are awesome",
