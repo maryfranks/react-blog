@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import Post from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+var post = {
+  title: "Dinosaurs are awesome",
+  author: "Stealthy Stegoasaurus",
+  body: "Check out this body property!",
+  comments: [
+    "First!",
+    "Great post",
+    "Hire this author now!"
+  ]
+}
+
+ReactDOM.render(
+  <Post
+  title={post.title}
+  author={post.author}
+  body={post.body}
+  comments={post.comments}/>,
+  document.getElementById('root')
+);

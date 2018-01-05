@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// bring in React and Component from React
 
-class App extends Component {
-  render() {
+import React, {Component} from 'react';
+
+// define our Hello component
+class Post extends Component {
+  // what should the component render?
+  render () {
+    // make sure to return some UI
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+      <h1>{this.props.title}</h1>
+      <h3>by {this.props.author}</h3>
+      <p>{this.props.body}</p>
+      <p>comments: </p>
+      <p>{this.props.comments[0]}</p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default Post
