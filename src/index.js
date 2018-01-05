@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Post from './App';
+import Post from './Post';
 import './index.css'
 
 var post = {
