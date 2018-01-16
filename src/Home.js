@@ -1,16 +1,44 @@
 import React, {Component} from 'react';
 
 class Home extends Component {
-  render () {
-    return (
-      <div>
-        <h1>Thanks for visiting my awesome website!</h1>
-        <p>Here is a joke I really like:</p>
-          <img src="https://i.redd.it/o33ryb4zfc6z.jpg" alt="It turns out computers are just flattened rocks with lightning in them" width="300px" />
 
-      </div>
-    )
+constructor(props) {
+  super(props)
+  this.state = {
+    shakespeare: ""
   }
 }
 
+componentDidMount() {
+  var base = this
+  let poemApi = 'http://ShakeItSpeare.com/api/poem';
+  fetch(poemApi)
+      .then((response) => {
+        return response.json()
+      }).then((json) => {
+          base.setState({ shakespeare: json.poem });
+      }).catch((ex) => {
+        console.log('An error occured while parsing!', ex)
+      })
+  }
+
+
+  render() {
+       let poetry = this.state.shakespeare;
+     if (this.state.shakespeare){
+       return (
+         <div>
+           <h1>My favorite Shakespeare poem:</h1>
+           {poetry}
+         </div>
+       )
+     }
+     return (
+       <div>
+         <h1>My favorite Shakespeare poem:</h1>
+         Loading...
+       </div>
+     )
+  }
+}
 export default Home
