@@ -41,13 +41,14 @@ const App = () => (
       */}
         <Link to="/">Home</Link>{' '}
         <Link to="/blog">My Blog</Link>{' '}
+        <Link to="/movie">The best movie</Link>{' '}
 
       </nav>
 
       <hr/>
 
       <Route exact path="/" component={Home}/>
-
+      <Route path="/movie" component={Movie}/>
       <Route path="/blog" component={
         () => (<Blog title={post.title}
                   allAuthors={post.authors}
