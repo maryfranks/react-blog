@@ -1,9 +1,6 @@
 // bring in React and Component from React
 
 import React, {Component} from 'react';
-import './Post.css'
-import Comment from './Comment.js';
-import Author from './Author.js'
 
 // define our Hello component
 class Post extends Component {
