@@ -42,6 +42,7 @@ const App = () => (
         <Link to="/">Home</Link>{' '}
         <Link to="/blog">My Blog</Link>{' '}
         <Link to="/movie">The best movie</Link>{' '}
+        <Link to="/about">About</Link>{' '}
         <Link to="/food">Favorite Food</Link>
       </nav>
 
@@ -50,6 +51,7 @@ const App = () => (
       <Route exact path="/" component={Home}/>
       <Route path="/movie" component={Movie}/>
       <Route path="/food" component={Food}/>
+      <Route path="/about" component={About}/>
       <Route path="/blog" component={
         () => (<Blog title={post.title}
                   allAuthors={post.authors}
